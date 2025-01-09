@@ -175,10 +175,10 @@
       </div>
       <!-- 将自动跳转可用域名<br />请耐心等候 -->
     </div>
-    <a href="https://instabio.cc/dd-y3y6-dq" target="_blank">
+    <a onclick="redirectToRandomSubdomain('1131.top')" target="_blank">
       <button class="button">地址一<br> 点我访问 - 聚合仓库</button>
     </a>
-    <a href="https://lhub.to/dudu3bai" target="_blank">
+    <a onclick="redirectToRandomSubdomain('1131.top')" target="_blank">
       <button class="button">地址二<br> 点我访问 - 聚合仓库</button>
     </a>
     <div class="notice">
@@ -187,10 +187,25 @@
     <div class="email">资源共享是互联网精神支柱</a></div>
   </div>
   
+  <script>
+    function generateRandomString(length) {
+      var result = '';
+      var characters = 'abcdefghijklmnopqrstuvwxyz';
+      var charactersLength = characters.length;
+      for (var i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+      }
+      return result;
+    }
 
+    function redirectToRandomSubdomain(domain) {
+      var randomSubdomain = generateRandomString(8); // 生成一个长度为8的随机字符串
+      window.location.href = "https://" + domain + "/#" + randomSubdomain;
+    }
+  </script>
   
   <footer>
-    <p>© 2024 juhecangku. All rights reserved.</p>
+    <p>© 2025 juhecangku. All rights reserved.</p>
   </footer>
   
 </body>
